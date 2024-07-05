@@ -1,38 +1,354 @@
-.App {
-  text-align: center;
+/* 
+ font-family: "Open Sans", sans-serif; 
+ azul: #2e64a1
+*/
+
+body{
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px; /*interlineado*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  background-color: #2e64a1;   
+  padding-top: 20px; /*se puso padding arriba*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header h1{
   color: white;
+  font-weight: 100;
+  font-style: italic;
+  /* display: inline-flex; */
+  display: inline-block;
+  position: relative;
+  bottom: 35px;
+  /*Con estas 3 propiedas lo ubicas de forma más manual*/
 }
 
-.App-link {
-  color: #61dafb;
+nav{
+  background-color: #6da9ed;  
+  margin-bottom: 20px; /*para separar la imagen, puedo separar el nav, no siempre img*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul{ /*saca el margen entre el NAV y HEADER*/
+  margin: 0;
+  padding: 0;
+  list-style: none; /*saca los puntitos de la lista*/
+  display: flex;
 }
+
+nav ul li{
+  flex-grow: 1; /*acomoda los elementos*/
+}
+
+nav ul li a{ /*llamas solamente al "a" de NAV*/
+  color: white;
+  text-decoration: none; /*saca la línea del vínculo*/
+  /* background-color: orange; para que se entienda el flex y center*/
+  padding: 3px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a:hover{
+  background-color: rgb(0,0,0,0.3); /*el "0.3" le baja la intensidad al color que pusite*/
+}
+
+nav ul li a.activo{ /*le agregué la clase a "a"*/
+  background-color: #4c76a5;
+}
+
+footer{
+  background-color: #ccc;
+  padding: 20px 0px;
+  text-align: center; /*no hace falta propiedades de posicionamiento*/
+  margin-top: 20px;
+}
+
+.holder{ /*hay que ponerlo en el contedor, "configuracion base"*/
+  max-width: 960px;
+  margin: 0 auto;
+  /* background-color: orange; */
+}
+
+h2{
+  color: #2e64a1;
+  font-weight: 400;
+}
+
+/*Home*/
+
+.homeimg img{
+  max-width: 100%; /*achica la imagen al achicar la pantalla*/
+}
+
+.columnas{
+  display: flex;
+}
+
+.bienvenidos{
+  width: 75%;
+  padding-right: 20px; /*para impedir que el parrafo choque*/
+  /* background-color: yellow; */
+}
+
+.testimonios{ /*Padre*/
+  width: 25%;
+}
+
+.bienvenidos p{
+  font-size: 20px;
+}
+
+.testimonio{ /*Hijo*/
+  background-color: #ccc;
+  padding: 16px;
+}
+
+.testimonio .cita{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  display: block; /*para que el elemento baje, span trabaja en linea como "inline"*/
+}
+
+.testimonio .autor{
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin: 16px 0;
+}
+
+/*Fin home*/
+
+/*Inicio Nosotros*/
+
+.historia p{
+  font-size: 12px;
+}
+
+.personas{
+  display: flex;
+  justify-content: space-between;
+}
+
+.persona{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  width: 18%; /*Porque son 5 elemntos, dividido 5 es 20%, al poner 18%* ya generas el espacio*/
+  padding: 12px; /*Recordar poner siempre "box-sizing: border-box*/
+  box-sizing: border-box; /*Mantiene el padding sin perder la propieda flex*/
+}
+
+.persona img{
+  border-radius: 100px;
+  box-shadow: 0 0 5px black;
+  width: 40px;
+  margin-top: 10px 0 12px;
+}
+
+.persona h5, .persona h6{
+  color: #2e64a1;
+  margin: 0;
+  font-weight: normal;
+}
+
+.persona h5{
+  font-size: 14px;
+}
+
+.persona h6{
+  font-style: italic;
+  font-size: 13px;
+
+}
+
+.persona p{
+  font-size: 12px;
+}
+
+/*Fin nosotros*/
+
+/*inicio servicios*/
+
+.servicio{
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.servicio img{
+  border-radius: 13px;
+  max-width: 225px; /*para que la imagen no se estire*/
+  display: block; /*para que la imagen no se estire*/
+}
+
+.servicio .info h4{
+  color: #2e64a1;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  border-bottom: 1px solid #2e64a1; /*cree una linea por medio de otra cosa*/
+  padding-bottom: 10px;
+}
+
+.servicio .info p{
+  font-size: 13px;
+  line-height: 25px; /*interlineado*/
+  box-sizing: border-box;
+} 
+
+.servicio:nth-child(even){ /*los hijos pares*/
+  flex-direction: row-reverse;
+}
+
+
+
+
+
+
+
+
+/*fin servicios*/
+
+/*Inicio contacto*/
+
+.contacto{ /*holder contacto*/
+  display: flex;
+  gap: 30px; /*en el elemento padre agrega espacio entre uno y otro*/
+}
+
+.contacto div{ /*los divs dentro de "holder contacto"*/
+  width: 100%;
+
+}
+
+.datos p{
+  font-size: 14px;
+}
+
+.datos ul li{
+  font-size: 13px;
+}
+
+/* .formulario p{
+  display: flex; ---- hace que el label + input esten en la misma linea
+} */
+
+.formulario p label{
+  min-width: 100px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+}
+
+.formulario p input, 
+.formulario p textarea{
+  width: 100%;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.formulario p textarea{
+  resize: none; /*saca la opción de que en la pag te deje modificar el textarea*/
+  height: 150px;
+}
+
+/* .formulario p:nth-child(4){ /*una pseudoclase como ":hover"*/ /*entre () elegis la p*/
+  /*background-color: orange; /*el problema es que si algo se agrega tenes que modi*/
+  /*align-items: start;*/
+/* }*/
+
+.formulario input[type="submit"]{
+  background-color: #6da9ed;
+  width: auto;
+  padding: 8px;
+  box-shadow: 0 0 px rgba(0,0,0,0.3);
+  color: white;
+  cursor: pointer;
+  /* position: relative;
+  left: 100px; */
+  /* text-align: right; no porque ubica el texto dentro del cuadrado*/
+}
+
+.formulario input[type="submit"]:hover{
+  background-color: #2e64a1;
+}
+
+
+/*Fin contacto*/
+
+/*Inicio @media 550*/
+
+@media screen and (max-width:550px){
+
+  .columnas{
+      flex-direction: column;
+  }
+
+  .bienvenidos,
+  .testimonios{
+      width: 100%;
+  }
+
+  .holder{
+      padding: 0 16px;
+  }
+
+  .personas{
+      flex-wrap: wrap;
+      gap: 16px;
+  }
+
+  .persona{
+      width: 47%;
+  }
+
+  .contacto{
+      flex-direction: column;
+  }
+
+  .datos{ 
+      display: none; /*sirve para sacar algo*/
+  }
+
+  header .holder{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 16px 0;
+  }
+
+  header h1{
+      position: static;
+      margin-left: 10px;
+      /* display: none; */
+      font-size: 27px;
+  }
+
+  header img{
+      max-width: 80px;
+  }
+
+}
+/*Fin @medio 550*/
+
+@media screen and (max-width:320px){
+
+  nav ul.holder{
+      flex-direction: column;
+      padding: 0;
+      
+  }
+
+}
+/*Fin @medio 320*/
