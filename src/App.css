@@ -12,6 +12,7 @@ body{
 header{
   background-color: #2e64a1;   
   padding-top: 20px; /*se puso padding arriba*/
+  text-align: center;
 }
 
 header h1{
@@ -21,7 +22,7 @@ header h1{
   /* display: inline-flex; */
   display: inline-block;
   position: relative;
-  bottom: 35px;
+  bottom: 12px;
   /*Con estas 3 propiedas lo ubicas de forma más manual*/
 }
 
