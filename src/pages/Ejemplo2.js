@@ -1,10 +1,14 @@
+import { EjemploEstado } from "../componentes/estado";
+
 const Ejemplo2 = (props) => {
 
 return(
-    <h3>hola soy la pagina ejemplo2</h3>
+    <>
+    <h1>Ejemplo de Estados</h1>
+    <EjemploEstado />
+    </>
 )
 
 }
-
 
 export default Ejemplo2;

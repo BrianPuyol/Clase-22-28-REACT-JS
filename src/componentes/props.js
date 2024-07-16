@@ -1,3 +1,5 @@
+import alumnos from '../data/alumnos.json'
+
 const EjemploProps1 = props => {
 
     return (
