@@ -1,4 +1,4 @@
-import alumnos from '../data/alumnos.json'
+//import alumnos from '../data/alumnos.json'
 
 const EjemploProps1 = props => {
 
