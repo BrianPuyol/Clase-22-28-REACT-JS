@@ -41,8 +41,8 @@ const EjemploProps4 = props => {
 const EjemploProps5 = props => {
 
     const handerClick = e => {
-        if (props.eventClick) {
-            props.eventClick('me cliqueaste')
+        if (props.eventoClick) {
+            props.eventoClick('me cliqueaste')
         }
     }
 

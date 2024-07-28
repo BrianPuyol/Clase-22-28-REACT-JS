@@ -30,10 +30,9 @@ const Ejemplo1 = (props) => {
       {/* como lo requiere si osi podemos tambien pasarle una funcion vacia */}
       <EjemploProps4 cambiarValor={() => {}}/>
 
-      <EjemploProps5 eventoClick={mostrarValor}/>
-
+      <EjemploProps5 eventoClick={mostrarValor} />
        {/*si no le coloque la props eventoclick no se exploto react a diferencia del ejemplo4*/}
-       <EjemploProps5 />
+      <EjemploProps5 />
        
     </div>
   )
